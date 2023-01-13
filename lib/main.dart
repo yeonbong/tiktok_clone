@@ -10,7 +10,7 @@ class TikTokApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'TikTok Clone',
+      title: 'TikTok Clon',
       theme: ThemeData(primaryColor: const Color(0xFFE9435A)),
       home: Container(),
     );
