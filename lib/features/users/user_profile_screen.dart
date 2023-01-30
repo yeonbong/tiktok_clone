@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/users/widgets/user_info.dart';
+import 'package:tiktok_clone/features/users/widgets/vertical_divider.dart';
 
 class UserProfileScreen extends StatefulWidget {
   const UserProfileScreen({super.key});
@@ -62,72 +64,20 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                   height: Sizes.size48,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        children: [
-                          const Text(
-                            "97",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: Sizes.size20,
-                            ),
-                          ),
-                          Gaps.v1,
-                          Text("Following",
-                              style: TextStyle(
-                                color: Colors.grey.shade500,
-                              ))
-                        ],
+                    children: const [
+                      UserInfo(
+                        number: "97",
+                        info: "Follwing",
                       ),
-                      VerticalDivider(
-                        width: Sizes.size32,
-                        thickness: Sizes.size1,
-                        color: Colors.grey.shade400,
-                        indent: Sizes.size14,
-                        endIndent: Sizes.size14,
+                      Verticaldivider(),
+                      UserInfo(
+                        number: "123.9M",
+                        info: "Followers",
                       ),
-                      Column(
-                        children: [
-                          const Text(
-                            "10M",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: Sizes.size20,
-                            ),
-                          ),
-                          Gaps.v1,
-                          Text(
-                            "Followers",
-                            style: TextStyle(
-                              color: Colors.grey.shade500,
-                            ),
-                          )
-                        ],
-                      ),
-                      VerticalDivider(
-                        width: Sizes.size32,
-                        thickness: Sizes.size1,
-                        color: Colors.grey.shade400,
-                        indent: Sizes.size14,
-                        endIndent: Sizes.size14,
-                      ),
-                      Column(
-                        children: [
-                          const Text(
-                            "194.3M",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: Sizes.size20,
-                            ),
-                          ),
-                          Gaps.v1,
-                          Text(
-                            "Likes",
-                            style: TextStyle(
-                              color: Colors.grey.shade500,
-                            ),
-                          )
-                        ],
+                      Verticaldivider(),
+                      UserInfo(
+                        number: "231.5M",
+                        info: "Likes",
                       )
                     ],
                   ),
